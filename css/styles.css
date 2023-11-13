@@ -149,7 +149,8 @@ span {
   font-weight: 700;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  max-width: 288px;
+  max-width: 220px;
+  margin: 0 auto;
   margin-bottom: 72px;
   text-transform: capitalize;
   text-align: center;
@@ -331,6 +332,9 @@ span {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+.portfolio-img {
+  height: 240px;
 }
 .portfolio-img-container {
   position: relative;
@@ -772,6 +776,7 @@ span {
   border: 1px solid #2e2f42;
 }
 .mobile-menu-close-icon {
+  opacity: 1;
   fill: #2e2f42;
 }
 .mobile-menu-list {
@@ -995,6 +1000,12 @@ span {
     column-gap: 24px;
     row-gap: 72px;
   }
+  .portfolio-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .portfolio-img {
+    height: 300px;
+  }
   .portfolio-box {
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   }
@@ -1110,7 +1121,7 @@ span {
     text-transform: none;
     margin-bottom: 48px;
   }
-  /* /Hero section Tablet Styles */
+  /* /Hero section Desktop Styles */
 
   /* Our benefits Desktop Styles */
   .benefits {
@@ -1149,7 +1160,7 @@ span {
   }
   /* /Our benefits Desktop Styles */
 
-  /* Our team Tablet Styles*/
+  /* Our team Desktop Styles*/
   .our-team {
     padding: 120px 0;
   }
@@ -1157,9 +1168,24 @@ span {
     flex-wrap: nowrap;
     gap: 24px;
   }
-  /* /Our team Tablet Styles*/
+  /* /Our team Desktop Styles*/
 
-  /* Portfolio Mobile Styles */
+  /* Portfolio Desktop Styles */
+  .portfolio {
+    padding: 120px 0;
+  }
+  .portfolio-item {
+    width: calc((100% - 48px) / 3);
+  }
+  .portfolio-box {
+    box-shadow: none;
+    border: 1px solid #e7e9fc;
+  }
+  /* /Portfolio Desktop Styles */
 
-  /* /Portfolio Mobile Styles */
+  /* Footer Desktop Styles */
+  .page-footer {
+    padding: 100px 0;
+  }
+  /* /Footer Desktop Styles */
 }
