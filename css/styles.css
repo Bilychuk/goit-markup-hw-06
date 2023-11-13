@@ -132,9 +132,9 @@ span {
   max-width: 320px;
   margin: 0 auto;
 }
-@media screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx),
-  screen and (min-device-pixel-ratio: 2) {
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px),
+  screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
   .hero-section {
     background-image: linear-gradient(
         to bottom,
@@ -402,7 +402,7 @@ span {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: 17.5px;
+  margin-bottom: 16px;
   color: #4d5ae5;
 }
 .accent-footer {
@@ -477,9 +477,8 @@ span {
   height: 40px;
   padding: 8px 16px;
   border-radius: 4px;
-  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  opacity: 0.3;
   background: transparent;
   font-size: 12px;
   font-weight: 400;
@@ -489,8 +488,7 @@ span {
   color: #ffffff;
 }
 .subscribe-email::placeholder {
-  color: #ffffff;
-  opacity: 0.6;
+  color: rgba(255, 255, 255, 0.6);
 }
 .subscribe-button {
   margin: 0 auto;
@@ -660,6 +658,7 @@ span {
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   background-color: transparent;
   outline: transparent;
   transition-property: border-color;
@@ -764,7 +763,6 @@ span {
 .mobile-menu-close-btn {
   border: none;
   background-color: #e7e9fc;
-  opacity: 0.1;
   padding: 0;
   line-height: 0;
   position: absolute;
@@ -773,10 +771,9 @@ span {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border: 1px solid #2e2f42;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .mobile-menu-close-icon {
-  opacity: 1;
   fill: #2e2f42;
 }
 .mobile-menu-list {
@@ -940,18 +937,6 @@ span {
       url(../images/tablet-background-image.jpg);
     max-width: 768px;
   }
-  @media screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx),
-    screen and (min-device-pixel-ratio: 2) {
-    .hero-section {
-      background-image: linear-gradient(
-          to bottom,
-          rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)
-        ),
-        url(../images/tablet-background-image@2x.jpg);
-    }
-  }
   .hero-title {
     font-size: 56px;
     line-height: 1.07;
@@ -973,7 +958,6 @@ span {
     width: 356px;
     align-items: flex-start;
   }
-
   /* .Our benefits Tablet Styles */
 
   /* Our team Tablet Styles*/
@@ -984,7 +968,7 @@ span {
     row-gap: 64px;
   }
   .team-item {
-    width: calc(100%-24px) / 2;
+    width: calc((100% - 24px) / 2);
     background-color: #ffffff;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
@@ -1008,6 +992,7 @@ span {
   }
   .portfolio-box {
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    border-top: none;
   }
   /* /Portfolio Tablet Styles */
 
@@ -1048,6 +1033,10 @@ span {
   }
   .subscribe-email {
     margin-bottom: 0;
+    width: 264px;
+  }
+  .subscribe-button {
+    margin: 0;
   }
   /* /Footer Tablet Styles */
 
@@ -1072,7 +1061,18 @@ span {
     display: none;
   }
 }
-
+@media screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+  .hero-section {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/tablet-background-image@2x.jpg);
+  }
+}
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
@@ -1080,7 +1080,7 @@ span {
     padding-right: 15px;
   }
 
-  /* Header Tablet Styles */
+  /* Header Desktop Styles */
   .contact-info {
     flex-direction: row;
     gap: 40px;
@@ -1092,9 +1092,9 @@ span {
     letter-spacing: 0.02em;
     padding: 24px 0;
   }
-  /* /Header Tablet Styles */
+  /* /Header Desktop Styles */
 
-  /* Hero section Tablet Styles */
+  /* Hero section Desktop Styles */
   .hero-section {
     padding: 188px 0;
     max-width: 1440px;
@@ -1104,18 +1104,6 @@ span {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/desktop-background-image.jpg);
-  }
-  @media screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx),
-    screen and (min-device-pixel-ratio: 2) {
-    .hero-section {
-      background-image: linear-gradient(
-          to bottom,
-          rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)
-        ),
-        url(../images/desktop-background-image@2x.jpg);
-    }
   }
   .hero-title {
     text-transform: none;
@@ -1164,6 +1152,9 @@ span {
   .our-team {
     padding: 120px 0;
   }
+  .team-item {
+    width: calc((100% - 72px) / 4);
+  }
   .team-list {
     flex-wrap: nowrap;
     gap: 24px;
@@ -1180,6 +1171,7 @@ span {
   .portfolio-box {
     box-shadow: none;
     border: 1px solid #e7e9fc;
+    border-top: none;
   }
   /* /Portfolio Desktop Styles */
 
@@ -1187,5 +1179,52 @@ span {
   .page-footer {
     padding: 100px 0;
   }
+  .logo-text {
+    margin-right: 120px;
+  }
+  .footer-icons {
+    margin-right: 80px;
+  }
+
+  .page-footer .container {
+    flex-wrap: nowrap;
+    column-gap: 0;
+    row-gap: 0;
+  }
+  /* Subscribe */
+  .subscribe-form {
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .subscribe-email {
+    border: 1px solid #ffffff;
+  }
+  .subscribe-email::placeholder {
+    color: #ffffff;
+  }
   /* /Footer Desktop Styles */
+
+  /* Modal Window Desktop */
+  .backdrop {
+    padding-top: 80px;
+  }
+  .modal {
+    padding: 72px 24px 24px 24px;
+  }
+  .modal-field-area {
+    padding-left: 38px;
+  }
+  /* /Modal Window Desktop */
+}
+@media screen and (min-resolution: 192dpi) and (min-width: 1158px),
+  screen and (min-resolution: 2dppx) and (min-width: 1158px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
+  .hero-section {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/desktop-background-image@2x.jpg);
+  }
 }
