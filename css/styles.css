@@ -337,7 +337,7 @@ span {
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .portfolio-img {
-  height: 240px;
+  height: 280px;
 }
 .portfolio-img-container {
   position: relative;
@@ -857,7 +857,7 @@ span {
   }
 
   /* Header Tablet Styles */
-  .page-header-container {
+  .page-header {
     padding-top: 0;
     padding-bottom: 0;
   }
