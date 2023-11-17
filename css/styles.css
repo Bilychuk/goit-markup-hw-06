@@ -1000,9 +1000,6 @@ span {
   /* /Portfolio Tablet Styles */
 
   /* Footer Tablet Styles */
-  .page-footer {
-    padding-left: 108px;
-  }
   .logo-footer {
     display: inline-block;
   }
@@ -1020,6 +1017,7 @@ span {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 72px;
+    padding-left: 108px;
   }
   .social-media-title {
     text-align: start;
@@ -1190,6 +1188,7 @@ span {
     flex-wrap: nowrap;
     column-gap: 0;
     row-gap: 0;
+    padding-left: 15px;
   }
   /* Subscribe */
   .subscribe-form {
