@@ -1018,6 +1018,7 @@ span {
     column-gap: 24px;
     row-gap: 72px;
     padding-left: 108px;
+    justify-content: space-between;
   }
   .social-media-title {
     text-align: start;
@@ -1181,7 +1182,7 @@ span {
     margin-right: 120px;
   }
   .footer-icons {
-    margin-right: 80px;
+    margin-right: auto;
   }
 
   .page-footer .container {
